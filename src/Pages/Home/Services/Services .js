@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import ServiceCard from './ServiceCard';
+import { } from "react-icons/bs";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -29,6 +30,42 @@ const Services = () => {
             <div className='text-center mb-5 mt-8'>
                 <button className="btn btn-outline bg-orange-500">More Services</button>
             </div>
+
+            {/* <div className="bg-black text-white text-center mt-5 mb-5">
+                <div style={{ display: 'flex' }} className="bg-black text-white p-32 text-center"> 
+                    
+                    <div style={{display: 'flex'}}>
+                        <div className='mt-4'>
+                            <BsCalendarPlus></BsCalendarPlus>
+                        </div>
+                        <div className='mx-4'>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>764537357439</h3>
+                        </div>
+                    </div>
+
+                    <div style={{display: 'flex'}}>
+                        <div className='mt-4'>
+                            <BsCalendarPlus></BsCalendarPlus>
+                        </div>
+                        <div className='mx-4'>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>764537357439</h3>
+                        </div>
+                    </div>
+
+                    <div style={{display: 'flex'}}>
+                        <div className='mt-4'>
+                            <BsCalendarPlus></BsCalendarPlus>
+                        </div>
+                        <div className='mx-4'>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>764537357439</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div> */}
         </section>
     );
 };
