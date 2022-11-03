@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FiTrash2 } from "react-icons/fi";
 
 const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
     const { _id, serviceName, phone, customer, price, service, status } = order;
@@ -15,7 +16,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
         <tr>
             <th>
                 <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'><FiTrash2 className='text-red-700'></FiTrash2></button>
                 </label>
             </th>
             <td>
@@ -43,7 +44,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
             <th>
                 <button 
                 onClick={() => handleStatusUpdate(_id)}
-                className="btn btn-ghost btn-xs">{status ? status : 'pending'}</button>
+                className="btn btn-ghost btn-xs bg-secondary text-white">{status ? status : 'pending'}</button>
             </th>
         </tr>
     );
