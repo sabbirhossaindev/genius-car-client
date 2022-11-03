@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg'
 
 const Footer = () => {
@@ -10,23 +11,23 @@ const Footer = () => {
             </div> 
             <div>
                 <span className="footer-title">Services</span> 
-                <a className="link link-hover">Branding</a> 
-                <a className="link link-hover">Design</a> 
-                <a className="link link-hover">Marketing</a> 
-                <a className="link link-hover">Advertisement</a>
+                <Link to="">Branding</Link> 
+                <Link to="">Design</Link> 
+                <Link to="">Marketing</Link> 
+                <Link to="">Advertisement</Link>
             </div> 
             <div>
                 <span className="footer-title">Company</span> 
-                <a className="link link-hover">About us</a> 
-                <a className="link link-hover">Contact</a> 
-                <a className="link link-hover">Jobs</a> 
-                <a className="link link-hover">Press kit</a>
+                <Link to="">About us</Link> 
+                <Link to="">Contact</Link> 
+                <Link to="">Jobs</Link> 
+                <Link to="">Press kit</Link>
             </div> 
             <div>
                 <span className="footer-title">Legal</span> 
-                <a className="link link-hover">Terms of use</a> 
-                <a className="link link-hover">Privacy policy</a> 
-                <a className="link link-hover">Cookie policy</a>
+                <Link to="">Terms of use</Link> 
+                <Link to="">Privacy policy</Link> 
+                <Link to="">Cookie policy</Link>
             </div>
             </footer>
     );
