@@ -28,7 +28,7 @@ const Services = () => {
             </div>
 
             <div className='text-center mb-5 mt-8'>
-                <button className="btn btn-outline bg-orange-500">More Services</button>
+                <button className="btn btn-outline text-orange-500">More Services</button>
             </div>
 
             {/* <div className="bg-black text-white text-center mt-5 mb-5">
