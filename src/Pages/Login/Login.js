@@ -7,7 +7,7 @@ import { BsFacebook, BsGithub } from "react-icons/bs";
 
 const Login = () => {
 
-    const { login } = useContext(AuthContext);
+    const { login, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -45,6 +45,14 @@ const Login = () => {
                     })
             })
             .catch(error => console.error(error));
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+            console.log(result.user);
+            navigate(from, {replace: true})    
+        })
     }
 
     return (
@@ -86,7 +94,7 @@ const Login = () => {
                     </div>
 
                     <div className='flex justify-center space-x-4 m-0'>
-                        <button aria-label='Log in with Google' className='p-3 rounded-sm'><FcGoogle/></button>
+                        <button onClick={handleGoogleSignIn} aria-label='Log in with Google' className='p-3 rounded-sm'><FcGoogle/></button>
                             {/* onClick={handleFacebook}       */}
                         <button aria-label='Log in with Facebook' className='p-3 rounded-sm'>
                             <BsFacebook/> </button>
