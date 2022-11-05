@@ -4,6 +4,7 @@ import img from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub } from "react-icons/bs";
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
@@ -21,11 +22,11 @@ const Login = () => {
 
         login(email, password)
             .then(result => {
+                toast.success('Login Success!')
                 const user = result.user;
                 const currentUser = {
                     email: user.email
                 }
-
                 console.log(currentUser);
 
                 // get jwt token
@@ -44,7 +45,7 @@ const Login = () => {
                         navigate(from, {replace: true})
                     })
             })
-            .catch(error => console.error(error));
+            .catch(error => toast.error(error.message))
     }
 
     const handleGoogleSignIn = () => {

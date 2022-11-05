@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Checkout = () => {
     const { _id, title, price } = useLoaderData()
@@ -36,7 +37,7 @@ const Checkout = () => {
             .then(data => {
                 console.log(data)
                 if(data.acknowledged){
-                    alert('Order placed successfully')
+                    toast.success('Order placed successfully')
                     form.reset();
                     
                 }

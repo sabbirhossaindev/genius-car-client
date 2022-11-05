@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import OrderRow from './OrderRow';
+import { toast } from 'react-toastify'
 
 const Orders = () => {
     
@@ -39,7 +40,7 @@ const Orders = () => {
             .then(data => {
                 console.log(data);
                 if (data.deletedCount > 0){
-                    alert('deleted successfully');
+                    toast.success('deleted successfully!')
                     const remaining = orders.filter(odr => odr._id !== id);
                     setOrders(remaining);
                 }
