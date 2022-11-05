@@ -2,16 +2,17 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { toast } from 'react-toastify'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     
     const handleLogOut = () => {
         logOut()
-            .then()
-            .catch()
+            .then(toast.success('Log Out Successful !'))
+            .catch(error => toast.error(error.message))
     }
-    
+
     const menuItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         {
@@ -19,7 +20,7 @@ const Header = () => {
             <>
             <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
             <li className='font-semibold'>
-                <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
+                <button onClick={handleLogOut} className='btn-ghost bg-orange-600 text-white'>Sign Out</button>
             </li>
             </>
             :
