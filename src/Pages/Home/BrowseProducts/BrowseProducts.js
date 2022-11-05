@@ -13,7 +13,7 @@ const BrowseProducts = () => {
             <div className='text-center mb-5 mt-8'>
                 <p className="text-2xl font-bold text-orange-600">Popular Products</p>
                 <h2 className="text-5xl font-semibold">Browse Our Products</h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. </p>
+                <p className='mt-3'>the majority have suffered alteration in some form, by injected humour, or randomizes <br /> words which don't look even slightly believable. </p>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4'>
 
