@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
  
@@ -10,7 +10,10 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
 
+
+    // All Provider
     const googleProvider = new GoogleAuthProvider()
+    const githubProvider = new GithubAuthProvider();
 
     const createUser = (email, password) => {
         setLoading(true)
@@ -26,6 +29,12 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider);
     };
+
+    const signInWithGitHub = () => {
+        setLoading(true)
+        return signInWithPopup(auth, githubProvider)
+    }
+
 
     const logOut = () => {
         localStorage.removeItem('Genius-token');
@@ -44,7 +53,7 @@ const AuthProvider = ({children}) => {
         }
     },[])
     
-    const authInfo = {user, loading, createUser, login, logOut, signInWithGoogle}
+    const authInfo = {user, loading, createUser, login, logOut, signInWithGoogle, signInWithGitHub}
 
     return (
         <AuthContext.Provider value={authInfo}>

@@ -7,7 +7,7 @@ import { BsFacebook, BsGithub } from "react-icons/bs";
 
 const Login = () => {
 
-    const { login, signInWithGoogle } = useContext(AuthContext);
+    const { login, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -49,6 +49,14 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         signInWithGoogle()
+            .then(result => {
+            console.log(result.user);
+            navigate(from, {replace: true})    
+        })
+    }
+
+    const handleGirHub = () => {
+        signInWithGitHub()
             .then(result => {
             console.log(result.user);
             navigate(from, {replace: true})    
@@ -98,8 +106,7 @@ const Login = () => {
                             {/* onClick={handleFacebook}       */}
                         <button aria-label='Log in with Facebook' className='p-3 rounded-sm'>
                             <BsFacebook/> </button>
-                            {/* onClick={handleGirhub}   */}
-                        <button aria-label='Log in with GitHub' className='p-3 rounded-sm'>
+                        <button onClick={handleGirHub} aria-label='Log in with GitHub' className='p-3 rounded-sm'>
                             <BsGithub/>
                         </button>
                     </div>
