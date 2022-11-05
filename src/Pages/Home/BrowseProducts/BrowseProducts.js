@@ -22,7 +22,7 @@ const BrowseProducts = () => {
                         <img src={img1} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
@@ -38,7 +38,7 @@ const BrowseProducts = () => {
                         <img src={img2} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
@@ -54,7 +54,7 @@ const BrowseProducts = () => {
                         <img src={img3} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
@@ -70,7 +70,7 @@ const BrowseProducts = () => {
                         <img src={img4} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
@@ -86,7 +86,7 @@ const BrowseProducts = () => {
                         <img src={img5} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
@@ -102,7 +102,7 @@ const BrowseProducts = () => {
                         <img src={img6} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h4 className='flex'>
+                        <h4 className='flex gap-1'>
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />
                             <BsFillStarFill className='text-orange-500' />

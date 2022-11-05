@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { FcGoogle } from "react-icons/fc";
+import { BsFacebook, BsGithub } from "react-icons/bs";
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext);
@@ -52,6 +54,27 @@ const SignUp = () => {
                             <input className="btn btn-primary" type="submit" value="Sign Up" />
                         </div>
                     </form>
+
+                    <div className='flex items-center pt-4 space-x-1'>
+                        <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
+                        <p className='px-3 text-sm dark:text-gray-400'>
+                            Sign Up with social accounts
+                        </p>
+                        <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
+                        
+                    </div>
+
+                    <div className='flex justify-center space-x-4 m-0'>
+                        <button aria-label='Log in with Google' className='p-3 rounded-sm'><FcGoogle/></button>
+                            {/* onClick={handleFacebook}       */}
+                        <button aria-label='Log in with Facebook' className='p-3 rounded-sm'>
+                            <BsFacebook/> </button>
+                            {/* onClick={handleGirhub}   */}
+                        <button aria-label='Log in with GitHub' className='p-3 rounded-sm'>
+                            <BsGithub/>
+                        </button>
+                    </div>
+
                     <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
                 </div>
             </div>

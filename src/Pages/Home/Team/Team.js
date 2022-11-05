@@ -6,7 +6,7 @@ import { BsFacebook, BsTwitter, BsGithub, BsInstagram } from "react-icons/bs";
 
 const Team = () => {
     return (
-        <section className='mb-8 mt-8'>
+        <section className='mb-20 mt-20'>
             <div className='text-center mb-5 mt-8'>
                 <p className="text-2xl font-bold text-orange-600">Team</p>
                 <h2 className="text-5xl font-semibold">Meet Our Team</h2>
