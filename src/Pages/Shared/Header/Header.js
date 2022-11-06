@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -13,7 +13,8 @@ const Header = () => {
             .catch(error => toast.error(error.message))
     }
 
-    const menuItems = <>
+    const menuItems = 
+    <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         {
             user?.email ? 
